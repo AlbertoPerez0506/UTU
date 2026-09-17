@@ -1,0 +1,816 @@
+<!-- ============================================================
+     index.html — Página principal UTU
+     Universidad Tecnológica del Usumacinta
+     ============================================================ -->
+<!DOCTYPE html>
+<html lang="es" data-base="./">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#30348C">
+
+    <!-- SEO -->
+    <title>Universidad Tecnológica del Usumacinta (UTU) | Formación que se vive</title>
+    <meta name="description" content="La Universidad Tecnológica del Usumacinta (UTU) forma profesionales con 60% práctica y 40% teoría, dos estadías profesionales y una ruta de TSU a Ingeniería o Licenciatura. Emiliano Zapata, Tabasco.">
+    <meta name="robots" content="index, follow">
+
+    <!-- TODO: sustituir por el dominio oficial cuando se confirme -->
+    <link rel="canonical" href="https://www.utu.edu.mx/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Universidad Tecnológica del Usumacinta">
+    <meta property="og:title" content="Universidad Tecnológica del Usumacinta (UTU)">
+    <meta property="og:description" content="Formación que se vive. Conocimiento que se aplica. Oferta de TSU, Ingeniería y Licenciatura con estadías profesionales y vinculación con el sector productivo.">
+    <!-- TODO: reemplazar por imagen institucional oficial 1200×630 -->
+    <meta property="og:image" content="assets/images/general/og-utu.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- TODO: colocar favicon institucional en assets/icons/ -->
+    <link rel="icon" href="assets/icons/icon.jpg" type="image/png">
+   
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+
+    <!-- Marca de JS activo (evita parpadeos en animaciones de entrada) -->
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body data-page="home">
+
+    <!-- =====================================================
+         HEADER (inyectado por components/header.js)
+         ===================================================== -->
+    <div data-component="header"></div>
+
+    <main id="contenido">
+
+        <!-- =================================================
+             1. HERO
+             ================================================= -->
+        <section class="hero" data-header-overlay aria-labelledby="hero-title">
+            <div class="hero__decor" aria-hidden="true">
+                <span class="hero__glow hero__glow--primary"></span>
+                <span class="hero__glow hero__glow--secondary"></span>
+                <span class="hero__grid-lines"></span>
+            </div>
+
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <p class="eyebrow">Universidad Tecnológica del Usumacinta</p>
+
+                    <h1 class="hero__title" id="hero-title">
+                        Formación que se vive.
+                        <span class="hero__title-accent">Conocimiento que se aplica.</span>
+                    </h1>
+
+                    <p class="hero__lead">
+                        En la UTU la formación profesional combina el conocimiento académico con la
+                        práctica, los proyectos, los espacios especializados y las experiencias que
+                        te preparan para tu futuro profesional.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="pages/oferta-educativa/index.html">
+                            Conoce nuestras carreras
+                            <svg class="icon btn__icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                        <a class="btn btn--outline" href="pages/universidad/bienvenida.html">
+                            Conoce la universidad
+                        </a>
+                    </div>
+
+                    <ul class="hero__facts">
+                        <li class="hero__fact">
+                            <strong>60%</strong>
+                            <span>Práctica</span>
+                        </li>
+                        <li class="hero__fact">
+                            <strong>40%</strong>
+                            <span>Teoría</span>
+                        </li>
+                        <li class="hero__fact">
+                            <strong>2</strong>
+                            <span>Estadías profesionales</span>
+                        </li>
+                        <li class="hero__fact">
+                            <strong>2 + 2</strong>
+                            <span>Títulos y cédulas</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero__visual">
+                    <figure class="hero__media">
+                        <!-- TODO: sustituir por fotografía institucional real del campus -->
+                        <img src="assets/images/general/UTU.jpeg"
+                             alt="Comunidad universitaria de la UTU en el campus de Emiliano Zapata, Tabasco"
+                             width="1200" height="1400"
+                             fetchpriority="high" decoding="async"
+                             data-img-fallback="Fotografía del campus UTU">
+                    </figure>
+
+                    <div class="hero__card">
+                        <span class="hero__card-label">Ruta de formación</span>
+                        <p class="hero__card-text">
+                            TSU <span aria-hidden="true">→</span> Primera estadía
+                            <span aria-hidden="true">→</span> Ingeniería o Licenciatura
+                            <span aria-hidden="true">→</span> Segunda estadía
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             2. PRESENTACIÓN DE LA UNIVERSIDAD
+             ================================================= -->
+        <section class="section section--intro" aria-labelledby="intro-title">
+            <div class="container">
+                <div class="intro__grid">
+                    <div class="intro__text reveal">
+                        <p class="eyebrow">La universidad</p>
+                        <h2 class="section__title" id="intro-title">
+                            Una universidad donde el conocimiento se convierte en experiencia
+                        </h2>
+                        <p class="lead">
+                            La Universidad Tecnológica del Usumacinta es una institución de educación
+                            superior ubicada en el municipio de Emiliano Zapata, Tabasco, cuya propuesta
+                            educativa se caracteriza por una formación orientada principalmente a la
+                            práctica y a la aplicación de conocimientos.
+                        </p>
+                        <p class="text-muted">
+                            Su modelo formativo combina conocimientos teóricos con una importante
+                            participación práctica: prácticas, proyectos, laboratorios, experiencias
+                            profesionales y participación en la vida universitaria. La comunidad
+                            universitaria participa además en actividades culturales, deportivas,
+                            académicas, tecnológicas y de vinculación.
+                        </p>
+
+                        <a class="link-arrow" href="pages/universidad/bienvenida.html">
+                            Conoce más sobre la UTU
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </div>
+
+                    <figure class="intro__media reveal" data-reveal-delay="120">
+                        <!-- TODO: sustituir por fotografía institucional real -->
+                        <img src="assets/images/general/universitarios-grupo.jpeg"
+                             alt="Estudiantes de la UTU durante una actividad práctica"
+                             width="1000" height="800" loading="lazy" decoding="async"
+                             data-img-fallback="Fotografía de actividad práctica">
+                    </figure>
+                </div>
+
+                <ul class="intro__pillars">
+                    <li class="pillar reveal">
+                        <span class="pillar__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-practice"></use></svg>
+                        </span>
+                        <h3 class="pillar__title">Formación práctica</h3>
+                        <p class="pillar__text">
+                            Competencias desarrolladas mediante prácticas, proyectos, laboratorios
+                            y experiencias profesionales.
+                        </p>
+                    </li>
+                    <li class="pillar reveal" data-reveal-delay="90">
+                        <span class="pillar__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-link"></use></svg>
+                        </span>
+                        <h3 class="pillar__title">Vinculación con el sector productivo</h3>
+                        <p class="pillar__text">
+                            Relación con empresas, organizaciones e instituciones que acerca a los
+                            estudiantes a su área profesional.
+                        </p>
+                    </li>
+                    <li class="pillar reveal" data-reveal-delay="180">
+                        <span class="pillar__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg>
+                        </span>
+                        <h3 class="pillar__title">Formación integral</h3>
+                        <p class="pillar__text">
+                            Actividades culturales, deportivas y paraescolares que complementan la
+                            preparación profesional.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- =================================================
+             3. MODELO ACADÉMICO 60 / 40
+             ================================================= -->
+        <section class="section section--model" aria-labelledby="model-title">
+            <div class="container">
+                <header class="section__head">
+                    <p class="eyebrow">Modelo académico</p>
+                    <h2 class="section__title" id="model-title">60% práctica, 40% teoría</h2>
+                    <p class="section__lead">
+                        Un esquema que favorece que los conocimientos adquiridos se utilicen y
+                        comprueben mediante ejercicios, prácticas, proyectos y actividades
+                        relacionadas con el área profesional.
+                    </p>
+                </header>
+
+                <div class="ratio reveal" data-ratio>
+                    <div class="ratio__bar" role="img"
+                         aria-label="Distribución del modelo académico: 60 por ciento práctica y 40 por ciento teoría">
+                        <span class="ratio__seg ratio__seg--practice" style="--value:60">
+                            <span class="ratio__value">60%</span>
+                        </span>
+                        <span class="ratio__seg ratio__seg--theory" style="--value:40">
+                            <span class="ratio__value">40%</span>
+                        </span>
+                    </div>
+                    <div class="ratio__legend">
+                        <span class="ratio__legend-item ratio__legend-item--practice">Práctica</span>
+                        <span class="ratio__legend-item ratio__legend-item--theory">Teoría</span>
+                    </div>
+                </div>
+
+                <div class="model__grid">
+                    <article class="model__card reveal">
+                        <span class="model__icon model__icon--practice">
+                            <svg class="icon" aria-hidden="true"><use href="#i-practice"></use></svg>
+                        </span>
+                        <h3 class="model__title">Componente práctico</h3>
+                        <p class="model__text">
+                            Se desarrolla a través de las propias materias, laboratorios, talleres,
+                            proyectos integradores, actividades académicas y experiencias profesionales.
+                        </p>
+                    </article>
+
+                    <article class="model__card reveal" data-reveal-delay="120">
+                        <span class="model__icon model__icon--theory">
+                            <svg class="icon" aria-hidden="true"><use href="#i-theory"></use></svg>
+                        </span>
+                        <h3 class="model__title">Componente teórico</h3>
+                        <p class="model__text">
+                            Comprende investigaciones, actividades de aprendizaje, trabajos académicos
+                            y los fundamentos necesarios para comprender y resolver situaciones
+                            relacionadas con la profesión.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             4. RUTA DE FORMACIÓN
+             ================================================= -->
+        <section class="section section--route" aria-labelledby="route-title">
+            <div class="container">
+                <header class="section__head section__head--center">
+                    <p class="eyebrow">Ruta académica</p>
+                    <h2 class="section__title" id="route-title">De TSU a Ingeniería o Licenciatura</h2>
+                    <p class="section__lead">
+                        El TSU y la Ingeniería o Licenciatura forman parte de una misma ruta de
+                        formación, con dos estadías profesionales y la posibilidad de obtener
+                        dos títulos y dos cédulas profesionales.
+                    </p>
+                </header>
+
+                <ol class="route__list">
+                    <li class="route__step reveal">
+                        <span class="route__num">01</span>
+                        <h3 class="route__title">Técnico Superior Universitario</h3>
+                        <p class="route__meta">2 años</p>
+                        <p class="route__text">Primera etapa de la ruta formativa universitaria.</p>
+                    </li>
+
+                    <li class="route__step reveal" data-reveal-delay="80">
+                        <span class="route__num">02</span>
+                        <h3 class="route__title">Primera estadía</h3>
+                        <p class="route__meta">Último cuatrimestre del TSU</p>
+                        <p class="route__text">
+                            Aplicación de conocimientos y competencias mediante actividades o un
+                            proyecto del área profesional.
+                        </p>
+                    </li>
+
+                    <li class="route__step reveal" data-reveal-delay="160">
+                        <span class="route__num">03</span>
+                        <h3 class="route__title">Ingeniería o Licenciatura</h3>
+                        <p class="route__meta">1 año 4 meses</p>
+                        <p class="route__text">Continuidad de estudios de nivel superior.</p>
+                    </li>
+
+                    <li class="route__step reveal" data-reveal-delay="240">
+                        <span class="route__num">04</span>
+                        <h3 class="route__title">Segunda estadía</h3>
+                        <p class="route__meta">Último cuatrimestre de la Ingeniería o Licenciatura</p>
+                        <p class="route__text">
+                            Cierre de la formación profesional, vinculado con las necesidades del
+                            sector correspondiente.
+                        </p>
+                    </li>
+
+                    <li class="route__step route__step--final reveal" data-reveal-delay="320">
+                        <span class="route__num">05</span>
+                        <h3 class="route__title">Egreso profesional</h3>
+                        <p class="route__meta">2 títulos + 2 cédulas profesionales</p>
+                        <p class="route__text">Conclusión de la ruta completa de formación.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- =================================================
+             5. OFERTA EDUCATIVA
+             ================================================= -->
+        <section class="section section--programs" aria-labelledby="programs-title">
+            <div class="container">
+                <header class="section__head">
+                    <p class="eyebrow">Oferta educativa</p>
+                    <h2 class="section__title" id="programs-title">Programas de TSU, Ingeniería y Licenciatura</h2>
+                    <p class="section__lead">
+                        Cada programa de Técnico Superior Universitario cuenta con su continuidad
+                        de estudios correspondiente.
+                    </p>
+                </header>
+
+                <div class="programs__grid">
+                    <!-- 01 -->
+                    <article class="program-card reveal">
+                        <p class="program-card__area">Tecnologías de la Información e Innovación Digital</p>
+                        <h3 class="program-card__title">TSU en Entornos Virtuales y Negocios Digitales</h3>
+                        <p class="program-card__continuity">
+                            <span>Continuidad</span>
+                            Ingeniería en Tecnologías de la Información e Innovación Digital
+                        </p>
+                        <p class="program-card__claim">“Creando experiencias digitales innovadoras”</p>
+                        <a class="link-arrow" href="pages/oferta-educativa/carrera-01.html">
+                            Ver programa
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </article>
+
+                    <!-- 02 -->
+                    <article class="program-card reveal" data-reveal-delay="60">
+                        <p class="program-card__area">Biotecnología</p>
+                        <h3 class="program-card__title">TSU en Biotecnología</h3>
+                        <p class="program-card__continuity">
+                            <span>Continuidad</span>
+                            Ingeniería en Biotecnología
+                        </p>
+                        <p class="program-card__claim">“Innovación biotecnológica que impulsa el desarrollo”</p>
+                        <a class="link-arrow" href="pages/oferta-educativa/carrera-02.html">
+                            Ver programa
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </article>
+
+                    <!-- 03 -->
+                    <article class="program-card reveal" data-reveal-delay="120">
+                        <p class="program-card__area">Negocios y Mercadotecnia</p>
+                        <h3 class="program-card__title">TSU en Mercadotecnia</h3>
+                        <p class="program-card__continuity">
+                            <span>Continuidad</span>
+                            Licenciatura en Negocios y Mercadotecnia
+                        </p>
+                        <p class="program-card__claim">“Pasión creativa por los negocios”</p>
+                        <a class="link-arrow" href="pages/oferta-educativa/carrera-03.html">
+                            Ver programa
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </article>
+
+                    <!-- 04 -->
+                    <article class="program-card reveal">
+                        <p class="program-card__area">Gastronomía</p>
+                        <h3 class="program-card__title">TSU en Gastronomía</h3>
+                        <p class="program-card__continuity">
+                            <span>Continuidad</span>
+                            Licenciatura en Gastronomía
+                        </p>
+                        <p class="program-card__claim">“El arte de cocinar, el placer de degustar”</p>
+                        <a class="link-arrow" href="pages/oferta-educativa/carrera-04.html">
+                            Ver programa
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </article>
+
+                    <!-- 05 -->
+                    <article class="program-card reveal" data-reveal-delay="60">
+                        <p class="program-card__area">Turismo</p>
+                        <h3 class="program-card__title">TSU en Turismo</h3>
+                        <p class="program-card__continuity">
+                            <span>Continuidad</span>
+                            Licenciatura en Gestión y Desarrollo Turístico
+                        </p>
+                        <p class="program-card__claim">“Pasión por el Turismo Sustentable y Accesible”</p>
+                        <a class="link-arrow" href="pages/oferta-educativa/carrera-05.html">
+                            Ver programa
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </article>
+
+                    <!-- 06 -->
+                    <article class="program-card reveal" data-reveal-delay="120">
+                        <p class="program-card__area">Protección Civil y Atención Prehospitalaria</p>
+                        <h3 class="program-card__title">TSU en Paramédico</h3>
+                        <p class="program-card__continuity">
+                            <span>Continuidad</span>
+                            Licenciatura en Protección Civil
+                        </p>
+                        <p class="program-card__claim">“Respondiendo al llamado, protegiendo a la comunidad”</p>
+                        <a class="link-arrow" href="pages/oferta-educativa/carrera-06.html">
+                            Ver programa
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </article>
+
+                    <!-- 07 -->
+                    <article class="program-card reveal">
+                        <p class="program-card__area">Contaduría</p>
+                        <h3 class="program-card__title">TSU en Contaduría</h3>
+                        <p class="program-card__continuity">
+                            <span>Continuidad</span>
+                            Licenciatura en Contaduría
+                        </p>
+                        <p class="program-card__claim">“Soluciones contables para la toma de decisiones”</p>
+                        <a class="link-arrow" href="pages/oferta-educativa/carrera-07.html">
+                            Ver programa
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </article>
+                </div>
+
+                <aside class="programs__note reveal">
+                    <div>
+                        <h3 class="programs__note-title">Licenciatura en Contaduría — Modalidad Mixta</h3>
+                        <p class="programs__note-text">
+                            La UTU también ofrece una modalidad mixta dirigida a personas que buscan
+                            continuar su preparación profesional mientras mantienen actividades
+                            laborales o personales, con actividades principalmente sabatinas y
+                            cupo limitado.
+                        </p>
+                        <p class="programs__note-warning">
+                            Requisitos, horarios, costos y fechas se publican conforme a la
+                            convocatoria vigente.
+                        </p>
+                    </div>
+                    <a class="btn btn--primary" href="pages/oferta-educativa/index.html">
+                        Ver toda la oferta
+                        <svg class="icon btn__icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- =================================================
+             6. ¿POR QUÉ ESTUDIAR EN LA UTU?
+             ================================================= -->
+        <section class="section section--why" aria-labelledby="why-title">
+            <div class="container">
+                <header class="section__head">
+                    <p class="eyebrow">¿Por qué estudiar en la UTU?</p>
+                    <h2 class="section__title" id="why-title">Una formación pensada para tu desarrollo profesional</h2>
+                </header>
+
+                <div class="why__grid">
+                    <article class="why__item why__item--feature reveal">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-certificate"></use></svg>
+                        </span>
+                        <h3 class="why__title">2 títulos y 2 cédulas profesionales</h3>
+                        <p class="why__text">
+                            Obtención de dos títulos y dos cédulas profesionales mediante la ruta de
+                            formación correspondiente.
+                        </p>
+                    </article>
+
+                    <article class="why__item reveal" data-reveal-delay="60">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-briefcase"></use></svg>
+                        </span>
+                        <h3 class="why__title">Experiencia laboral</h3>
+                        <p class="why__text">Estadías profesionales al concluir el TSU y la Ingeniería o Licenciatura.</p>
+                    </article>
+
+                    <article class="why__item reveal" data-reveal-delay="120">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>
+                        </span>
+                        <h3 class="why__title">Certificaciones</h3>
+                        <p class="why__text">Certificación en competencias académicas y laborales.</p>
+                    </article>
+
+                    <article class="why__item reveal" data-reveal-delay="180">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-snow"></use></svg>
+                        </span>
+                        <h3 class="why__title">Aulas climatizadas</h3>
+                        <p class="why__text">Espacios con equipo audiovisual para apoyar el aprendizaje.</p>
+                    </article>
+
+                    <article class="why__item reveal">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+                        </span>
+                        <h3 class="why__title">Internacionalización</h3>
+                        <p class="why__text">Oportunidades de movilidad y experiencias académicas internacionales.</p>
+                    </article>
+
+                    <article class="why__item reveal" data-reveal-delay="60">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg>
+                        </span>
+                        <h3 class="why__title">Asesorías y tutorías</h3>
+                        <p class="why__text">Acompañamiento académico durante la formación universitaria.</p>
+                    </article>
+
+                    <article class="why__item reveal" data-reveal-delay="120">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-trophy"></use></svg>
+                        </span>
+                        <h3 class="why__title">Cultura y deporte</h3>
+                        <p class="why__text">Actividades culturales, deportivas y paraescolares.</p>
+                    </article>
+
+                    <article class="why__item reveal" data-reveal-delay="180">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-sparkle"></use></svg>
+                        </span>
+                        <h3 class="why__title">Habilidades blandas</h3>
+                        <p class="why__text">Talleres y capacitación especializada de acuerdo con el perfil académico.</p>
+                    </article>
+
+                    <article class="why__item why__item--feature reveal">
+                        <span class="why__icon">
+                            <svg class="icon" aria-hidden="true"><use href="#i-link"></use></svg>
+                        </span>
+                        <h3 class="why__title">Vinculación con el sector productivo</h3>
+                        <p class="why__text">
+                            Relaciones con empresas y organizaciones que favorecen estadías,
+                            colaboraciones y proyectos.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             7. CAMPUS E INSTALACIONES
+             ================================================= -->
+        <section class="section section--campus" aria-labelledby="campus-title">
+            <div class="container">
+                <header class="section__head">
+                    <p class="eyebrow">Campus</p>
+                    <h2 class="section__title" id="campus-title">Espacios para aprender, practicar y convivir</h2>
+                    <p class="section__lead">
+                        La universidad cuenta con espacios destinados a la formación académica,
+                        las prácticas, la convivencia y el desarrollo integral de la comunidad
+                        universitaria.
+                    </p>
+                </header>
+
+                <div class="campus__grid">
+                    <article class="campus__item campus__item--wide reveal">
+                        <figure class="campus__media">
+                            <!-- TODO: fotografía real del Laboratorio de Biotecnología -->
+                            <img src="assets/images/general/uni-3.jpeg"
+                                 alt="Laboratorio de Biotecnología de la UTU"
+                                 width="900" height="600" loading="lazy" decoding="async"
+                                 data-img-fallback="Laboratorio de Biotecnología">
+                        </figure>
+                        <div class="campus__caption">
+                            <h3 class="campus__title">Laboratorio de Biotecnología</h3>
+                            <p class="campus__text">
+                                Espacio especializado para apoyar las actividades prácticas del área.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="campus__item reveal" data-reveal-delay="60">
+                        <figure class="campus__media">
+                            <!-- TODO: fotografía real de los laboratorios de cómputo -->
+                            <img src="assets/images/paraescolares/basquet.jpg"
+                                 alt="Laboratorios de cómputo de la UTU"
+                                 width="900" height="600" loading="lazy" decoding="async"
+                                 data-img-fallback="Laboratorios de cómputo">
+                        </figure>
+                        <div class="campus__caption">
+                            <h3 class="campus__title">Laboratorios de cómputo</h3>
+                            <p class="campus__text">
+                                Cuatro laboratorios, dos de mayor capacidad y dos para equipos de
+                                menor requerimiento. La infraestructura incluye equipos Mac.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="campus__item reveal" data-reveal-delay="120">
+                        <figure class="campus__media">
+                            <!-- TODO: fotografía real de aulas -->
+                            <img src="assets/images/general/universitarios-grupo.jpeg"
+                                 alt="Aula climatizada con equipo audiovisual de la UTU"
+                                 width="900" height="600" loading="lazy" decoding="async"
+                                 data-img-fallback="Aulas climatizadas">
+                        </figure>
+                        <div class="campus__caption">
+                            <h3 class="campus__title">Aulas</h3>
+                            <p class="campus__text">
+                                Aulas climatizadas y equipo audiovisual para apoyar la enseñanza
+                                y el aprendizaje.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="campus__item reveal">
+                        <figure class="campus__media">
+                            <!-- TODO: fotografía real de auditorios -->
+                            <img src="assets/images/general/uni-1.jpeg"
+                                 alt="Auditorio de la UTU durante un evento institucional"
+                                 width="900" height="600" loading="lazy" decoding="async"
+                                 data-img-fallback="Auditorios">
+                        </figure>
+                        <div class="campus__caption">
+                            <h3 class="campus__title">Auditorios</h3>
+                            <p class="campus__text">
+                                Auditorio de Turismo, Auditorio del Edificio 1 y Auditorio del
+                                Edificio 2, para actividades académicas, culturales e institucionales.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="campus__item reveal" data-reveal-delay="60">
+                        <figure class="campus__media">
+                            <!-- TODO: fotografía real de instalaciones deportivas -->
+                            <img src="assets/images/general/rector-.jpeg"
+                                 alt="Instalaciones deportivas de la UTU"
+                                 width="900" height="600" loading="lazy" decoding="async"
+                                 data-img-fallback="Instalaciones deportivas">
+                        </figure>
+                        <div class="campus__caption">
+                            <h3 class="campus__title">Instalaciones deportivas</h3>
+                            <p class="campus__text">
+                                Cancha de fútbol sintética, cancha techada para fútbol y básquetbol,
+                                alberca semiolímpica y áreas verdes.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="campus__item reveal" data-reveal-delay="120">
+                        <figure class="campus__media">
+                            <!-- TODO: fotografía real de biblioteca y servicios -->
+                            <img src="assets/images/general/uni-4.jpeg"
+                                 alt="Biblioteca de la Universidad Tecnológica del Usumacinta"
+                                 width="900" height="600" loading="lazy" decoding="async"
+                                 data-img-fallback="Biblioteca">
+                        </figure>
+                        <div class="campus__caption">
+                            <h3 class="campus__title">Biblioteca y servicios</h3>
+                            <p class="campus__text">
+                                Biblioteca, consultorio de enfermería, consultorio psicopedagógico,
+                                servicio médico mediante IMSS, papelería, cafetería e internet gratuito.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             8. VIDA UNIVERSITARIA
+             ================================================= -->
+        <section class="section section--life" aria-labelledby="life-title">
+            <div class="container">
+                <div class="life__grid">
+                    <div class="life__content reveal">
+                        <p class="eyebrow">Vida universitaria</p>
+                        <h2 class="section__title" id="life-title">La experiencia también se vive fuera del aula</h2>
+                        <p class="lead">
+                            La experiencia universitaria no se limita a las actividades académicas.
+                            La UTU desarrolla actividades culturales, deportivas, sociales y
+                            extracurriculares que complementan la formación profesional.
+                        </p>
+                        <p class="text-muted">
+                            Durante el primer año, los estudiantes pueden participar en actividades
+                            paraescolares que permiten desarrollar disciplina, trabajo en equipo,
+                            creatividad, condición física y convivencia. Al finalizar los periodos
+                            correspondientes se realizan demostraciones y actividades de cierre.
+                        </p>
+
+                        <a class="link-arrow" href="pages/comunidad/paraescolares.html">
+                            Conoce los paraescolares
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                        </a>
+                    </div>
+
+                    <div class="life__panel reveal" data-reveal-delay="120">
+                        <h3 class="life__panel-title">Actividades paraescolares</h3>
+                        <ul class="life__chips">
+                            <li class="chip">Taekwondo</li>
+                            <li class="chip">Banda de Guerra</li>
+                            <li class="chip">Fútbol</li>
+                            <li class="chip">Fútbol Femenil</li>
+                            <li class="chip">Voleibol</li>
+                            <li class="chip">Pintura</li>
+                            <li class="chip">Serigrafía</li>
+                            <li class="chip">Fitness</li>
+                            <li class="chip">Tamborileros</li>
+                        </ul>
+
+                        <figure class="life__media">
+                            <!-- TODO: fotografía real de actividades paraescolares -->
+                            <img src="assets/images/paraescolares/paraescolares-1.jpeg"
+                                 alt="Estudiantes de la UTU en actividades paraescolares"
+                                 width="800" height="520" loading="lazy" decoding="async"
+                                 data-img-fallback="Actividades paraescolares">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             9. NOTICIAS Y EVENTOS (contenido dinámico)
+             ================================================= -->
+        <section class="section section--news" aria-labelledby="news-title">
+            <div class="container">
+                <header class="section__head section__head--row">
+                    <div>
+                        <p class="eyebrow">Noticias y eventos</p>
+                        <h2 class="section__title" id="news-title">Lo que ocurre en la UTU</h2>
+                    </div>
+                    <a class="btn btn--outline btn--sm" href="pages/comunidad/proyectos.html">
+                        Ver todas
+                    </a>
+                </header>
+
+                <p class="news__note" data-news-note hidden>
+                    Contenido de ejemplo. Pendiente de sustituirse por publicaciones oficiales
+                    desde Firestore.
+                </p>
+
+                <!-- Las tarjetas se generan desde js/pages/home.js -->
+                <div class="news__grid" data-news-grid aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             10. CTA INSTITUCIONAL
+             ================================================= -->
+        <section class="section section--cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta reveal">
+                    <div class="cta__decor" aria-hidden="true">
+                        <span class="cta__glow"></span>
+                    </div>
+
+                    <div class="cta__content">
+                        <p class="eyebrow eyebrow--on-dark">#OrgullosamenteUTU · #ÚneteYa</p>
+                        <h2 class="cta__title" id="cta-title">
+                            Aquí, aprender no significa únicamente conocer.
+                        </h2>
+                        <p class="cta__text">
+                            Significa practicar, desarrollar, participar y transformar.
+                            Conoce la oferta académica de la Universidad Tecnológica del Usumacinta
+                            y forma parte de una ruta de formación con experiencia profesional.
+                        </p>
+
+                        <div class="cta__actions">
+                            <a class="btn btn--light" href="pages/oferta-educativa/index.html">
+                                Explora la oferta educativa
+                                <svg class="icon btn__icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                            </a>
+                            <a class="btn btn--ghost-light" href="pages/comunidad/ubicacion.html">
+                                Ubicación y contacto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER (inyectado por components/footer.js)
+         ===================================================== -->
+    <div data-component="footer"></div>
+
+    <!-- Scripts (el orden importa) -->
+        <!-- Scripts (el orden importa) -->
+    <script defer src="components/header.js"></script>
+    <script defer src="components/footer.js"></script>
+    <script defer src="js/components.js"></script>
+    <script defer src="js/navigation.js"></script>
+    <script defer src="js/app.js"></script>
+    <script defer src="js/pages/home.js"></script>
+</body>
+</body>
+</html>

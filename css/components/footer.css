@@ -1,0 +1,160 @@
+/* ============================================================
+   footer.css — Footer institucional
+   ============================================================ */
+
+.site-footer {
+    background-color: var(--color-ink);
+    color: #C8CCDC;
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-xl);
+    font-size: var(--fs-sm);
+}
+
+.site-footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+}
+
+@media (min-width: 640px) {
+    .site-footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .site-footer__grid {
+        grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+        gap: var(--space-xl);
+    }
+}
+
+/* ---------- Columna de marca ---------- */
+.site-footer__brand {
+    max-width: 380px;
+}
+
+.site-footer__logo {
+    height: 44px;
+    width: auto;
+    aspect-ratio: 5 / 2;
+    object-fit: contain;
+    /* TODO: usar versión blanca del logo cuando esté disponible */
+    filter: brightness(0) invert(1);
+    margin-bottom: var(--space-lg);
+}
+
+.site-footer__about {
+    color: #A6ACC2;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.site-footer__address {
+    font-style: normal;
+    color: #A6ACC2;
+    line-height: 1.7;
+}
+
+.site-footer__address strong {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: var(--space-2xs);
+}
+
+/* ---------- Títulos y listas ---------- */
+.site-footer__title {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: var(--space-lg);
+}
+
+.site-footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.site-footer__link {
+    color: #A6ACC2;
+    transition: color var(--t-fast), padding-left var(--t-fast);
+    display: inline-block;
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+    color: var(--color-secondary);
+    padding-left: 4px;
+}
+
+/* ---------- Redes sociales ---------- */
+.site-footer__social {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+}
+
+.site-footer__social-link {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-pill);
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #FFFFFF;
+    transition:
+        background-color var(--t-fast),
+        transform var(--t-fast);
+}
+
+.site-footer__social-link:hover {
+    background-color: var(--color-secondary);
+    color: #0F1226;
+    transform: translateY(-2px);
+}
+
+.site-footer__social-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ---------- Barra inferior ---------- */
+.site-footer__bottom {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    font-size: var(--fs-xs);
+    color: #8B90A8;
+}
+
+@media (min-width: 768px) {
+    .site-footer__bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.site-footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.site-footer__legal a {
+    color: #8B90A8;
+    transition: color var(--t-fast);
+}
+
+.site-footer__legal a:hover {
+    color: var(--color-secondary);
+}
